@@ -1,0 +1,56 @@
+{
+  "rows_total": 1000000,
+  "rows_used_for_modeling": 20000,
+  "years": [
+    1975,
+    2024
+  ],
+  "schema": {
+    "year": "int64",
+    "reporter_iso3": "object",
+    "partner_iso3": "object",
+    "product_code": "object",
+    "distance_km": "float64",
+    "fta_active": "int64",
+    "adval_tariff_pct": "float64",
+    "reporter_gdp_bln": "float64",
+    "partner_gdp_bln": "float64",
+    "reporter_pop_m": "float64",
+    "partner_pop_m": "float64",
+    "reporter_cpi": "float64",
+    "partner_cpi": "float64",
+    "export_value_usd_mln": "float64",
+    "quantity_tonnes": "float64",
+    "unit_price_usd_per_tonne": "float64"
+  },
+  "target": "export_value_usd_mln",
+  "categorical_features": [
+    "reporter_iso3",
+    "partner_iso3",
+    "product_code",
+    "fta_active"
+  ],
+  "numeric_features": [
+    "year",
+    "distance_km",
+    "adval_tariff_pct",
+    "reporter_gdp_bln",
+    "partner_gdp_bln",
+    "reporter_pop_m",
+    "partner_pop_m",
+    "reporter_cpi",
+    "partner_cpi",
+    "quantity_tonnes",
+    "unit_price_usd_per_tonne"
+  ],
+  "models_trained": [
+    "rf_numeric",
+    "hgb_numeric"
+  ],
+  "best_model": "rf_numeric",
+  "test_scores": {
+    "rmse": 235.48949283989003,
+    "mae": 24.339545381249682,
+    "r2": 0.9959199069685492
+  }
+}
